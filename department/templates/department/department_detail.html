@@ -1,0 +1,312 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    
+
+<div id="main-content" class="site-main-content">
+    <section class="site-content-area">
+
+        <div class="uni-banner-default uni-background-1">
+            <div class="container">
+                <!-- Page title -->
+                <div class="page-title">
+                    <div class="page-title-inner">
+                        <h1>{{department.name}}  departments</h1>
+                    </div>
+                </div>
+                <!-- End page title -->
+
+                <!-- Breadcrumbs -->
+                <ul class="breadcrumbs">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">departments</a></li>
+                    <li><a href="#">{{department.name}} </a></li>
+                </ul>
+                <!-- End breadcrumbs -->
+            </div>
+        </div>
+
+        <div class="uni-single-departments-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="uni-single-departments-left">
+                            <!--Opening hours-->
+                            <div class="uni-single-department-open-hours">
+                                <h3 class="uni-single-department-left-title">
+                                    Opening hours
+                                </h3>
+                                <div class="uni-single-department-left-table">
+                                    <table class="table">
+                                        <tr>
+                                            <td>Monday</td>
+                                            <td>8:00 - 17:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tuesday</td>
+                                            <td>8:00 - 17:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wednesday</td>
+                                            <td>8:00 - 17:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>thursday</td>
+                                            <td>8:00 - 17:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>friday</td>
+                                            <td>8:00 - 17:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>saturday</td>
+                                            <td>8:00 - 17:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>sunday</td>
+                                            <td>8:00 - 17:00</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!--Contact us-->
+                            <div class="uni-single-department-contact-info">
+                                <h3 class="uni-single-department-left-title">
+                                    CONTACT INFO
+                                </h3>
+                                <ul>
+                                    
+                                        
+                                    <li>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i> {{department.address}}
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> {{department.phone_number}}
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>  <span style="font-size: 11px;">{{department.email}}</span> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="uni-single-departments-right">
+
+                            <div class="uni-single-departments-cardiology">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="{% static 'images/departments/img.jpg' %}" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h3 class="uni-single-departments-right-title">{{department.name}}</h3>
+                                        <p style="width: 300px;">{{department.description}}</p>
+                                        <ul>
+                                            <pre style = "background-color: transparent;font-family: Poppins; color: #7F6666;font-size: 14px;">{{department.additional_notes}}</pre>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--TREATMENTS INVENSTIGATION-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="uni-single-departments-treatments-investigation">
+                                        <h3 class="uni-single-departments-right-title">treatments</h3>
+                                        <div class="uni-divider"></div>
+                                        <ul>
+                                            <li>
+                                                Echocardiography <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Implantable Cardiac Monitor (ICM) <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Treadmill stress testing <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Transoesophageal echocardiogram (TOE) <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Pacemaker checks <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Electrophysiology (EP) Study <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Holter monitoring <span>$200</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="uni-single-departments-treatments-investigation">
+                                        <h3 class="uni-single-departments-right-title">investigations</h3>
+                                        <div class="uni-divider"></div>
+                                        <ul>
+                                            <li>
+                                                Echocardiography <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Implantable Cardiac Monitor (ICM) <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Treadmill stress testing <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Transoesophageal echocardiogram (TOE) <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Pacemaker checks <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Electrophysiology (EP) Study <span>$200</span>
+                                            </li>
+                                            <li>
+                                                Holter monitoring <span>$200</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--DOCTOR-->
+                            <div class="uni-single-department-doctor">
+                                <h3 class="uni-single-departments-right-title">doctors</h3>
+                                <div class="uni-divider"></div>
+
+                                <div class="uni-single-department-doctor-body">
+                                    <div class="row">
+                                        
+                                        {% for doc in doctor %}
+                                                {% if doc.category == department.name %}
+    
+
+                                                <div class="col-md-5">
+                                                    <div class="uni-single-department-doctor-item">
+                                                        <div class="item-img">
+                                                            <img src="{{doc.image.url}}" alt="" class="img-responsive">
+                                                        </div>
+                                                        <div class="item-caption">
+                                                            <div class="item-caption-head">
+                                                                <div class="col-md-3  col-sm-2 col-xs-3 uni-clear-padding">
+                                                                    <div class="item-icons">
+                                                                        <img src="{{department.image.url}}" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-9  col-sm-10 col-xs-9 uni-clear-padding">
+                                                                    <div class="item-title">
+                                                                        <h4>{{doc.name}}</h4>
+                                                                        <span>{{doc.category}}</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-caption-info">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <td>Degrees</td>
+                                                                        <td>{{doc.degree}}</td>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Mon - fri</td>
+                                                                            <td>{{doc.opening_time_Mon_to_Fri|date:"G:i A"}} - {{doc.closing_time_Mon_to_Fri|date:"G:i A"}}</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>saturday</td>
+                                                                            <td> {{doc.opening_time_Saturday|date:"G:i A"}} - {{doc.closing_time_Saturday|date:"G:i A"}}</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Sunday</td>
+                                                                            <td>{{doc.opening_time_Sunday|date:"G:i A"}} - {{doc.closing_time_Sunday|date:"G:i A"}}</td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                        <tfoot>
+                                                                        <tr>
+                                                                            <td colspan="2">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="{{doc.facebook_account}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                                                    </li>
+                                                                                    <li><a href="{{doc.twitter_account}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                                                    <li><a href="{{doc.google_plus_account}}" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                                                    <li><a href="{{doc.youtube_account}}" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                                                                </ul>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tfoot>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {% endif %}
+                                                {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                                
+    
+
+
+                                       
+                                            
+
+
+                            <!--APPOINTMENTS-->
+                            <div class="uni-single-department-appointment">
+                                <h3 class="uni-single-departments-right-title">appointment</h3>
+                                <div class="uni-divider"></div>
+                                <div class="uni-single-department-appointment-form">
+                                    <form action="#">
+                                        <div class="row">
+                                            <div class="col-md-4">
+
+                                                <div class="input-group form-group">
+                                                    <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" name="name" value="" placeholder="your name">
+                                                </div>
+                                                <div class="input-group form-group">
+                                                    <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                                    <input type="tel" class="form-control" name="phone" value="" placeholder="phone number">
+                                                </div>
+                                                <div class="input-group form-group">
+                                                    <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                                    <input type="email" class="form-control" name="email" value="" placeholder="email">
+                                                </div>
+                                                <div class="input-group form-group">
+                                                    <div class="input-group date date-check-in" data-date="12-02-2017" data-date-format="mm-dd-yyyy">
+                                                        <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                                        <input name="date1" class="form-control" type="text" value="12-02-2017">
+                                                        <span class="input-group-addon btn"><i class="fa fa-calendar" id="ti-calendar1" aria-hidden="true"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="input-group form-group">
+                                                    <textarea id="message" name="phone" class="form-control" placeholder="note"></textarea>
+                                                </div>
+                                                <button class="vk-btn vk-btn-send">send</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+{% endblock content %}
+    

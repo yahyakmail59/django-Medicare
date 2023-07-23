@@ -1,24 +1,27 @@
-slider:
-    - image
-    - title
-    - sub-title
+Home page:
+    slider:
+        - image
+        - title
+        - sub-title
 
-BOOK APPOITMENT: 
-    - name
-    - phone_number
-    - email
-    - Appointment booking time
-    - note
+    BOOK APPOITMENT: 
+        - name
+        - phone_number
+        - email
+        - Appointment booking time
+        - note
 
-    list BOOK APPOITMENT Page
+        opening our (edit in frontend)
 
-opening our (edit in frontend)
+                
+list BOOK APPOITMENT Page:
+    - table return all data in DB from BOOK APPOITMENT
 
-DEPARTMENT:
-    - image
-    - name
-    - description
-    - Gallary
+    DEPARTMENT:
+        - image
+        - name
+        - description
+        - Gallary
     - TREATMENTS
         - name
         - price
@@ -59,7 +62,6 @@ Doctor:
         - email
 
       DOCTOR DETAILS page
-
 slider_doctor:
     - image
     - name
@@ -118,17 +120,19 @@ CONTACT US:
 
 GALLERY:
     - DEPARTMENT (forign)
-    
+    - images
     filter DEPARTMENT Gallary by DEPARTMENT
 
 shop:
     - CATEGORIES
-    - PRICE (forign from department)
-    - item_name (forign from department)
-    - image (forign from department)
-
-
-
+    - TREATMENTS
+        - name
+        - price
+        - image
+        - descriptions
+        - QUANTITY
+        - category
+        - Gallary
 
     search
     filters [CATEGORIES, PRICE, BEST SELLERS, ]
@@ -152,7 +156,6 @@ cart:
 
 CHECK OUT:
     - user
-    -
 
 
     BILLING DETAILS Form
@@ -172,3 +175,43 @@ CHECK OUT:
         PAYMENT METHOD
         place order
         
+
+    home app:
+        slider:
+            - image
+            - title
+            - sub-title
+           
+        BOOK APPOITMENT form: 
+            - name
+            - phone_number
+            - email
+            - Appointment booking Date
+            - note
+
+        DEPARTMENT:
+            - image
+            - name
+            - description
+
+        Doctor:
+            - image
+            - name
+            - DEPARTMENT Image (forign key)
+            - DEPARTMENT (category)
+
+        SERVICES:
+            - name
+            - DEPARTMENT Image (forign key)
+            - description
+
+        slider CUSTOMERS SAY:
+            - Review writer
+            - disease name
+            - description
+            - petiont image
+
+        LATEST POSTS:
+            - title
+            - published at
+            - image

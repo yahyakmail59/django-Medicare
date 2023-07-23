@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+<div id="main-content" class="site-main-content">
+    <section class="site-content-area">
+
+        <div class="uni-banner-default uni-background-1">
+            <div class="container">
+                <!-- Page title -->
+                <div class="page-title">
+                    <div class="page-title-inner">
+                        <h1>departments</h1>
+                    </div>
+                </div>
+                <!-- End page title -->
+
+                <!-- Breadcrumbs -->
+                <ul class="breadcrumbs">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">departments</a></li>
+                </ul>
+                <!-- End breadcrumbs -->
+            </div>
+        </div>
+
+        <div class="uni-departments-body">
+            <div class="container">
+                <div class="row">
+                    
+                    {% for department in department_list %}
+                        
+                    <div class="col-md-4">
+                        <div class="uni-departments-default" style="width: 380px;height: 300px;">
+                            <div class="item-icons">
+                                <a href="{% url 'departments:department_detail' department.slug %}"><img src="{{department.image.url}}" alt="" class="img-responsive"></a>
+                            </div>
+                            <div class="item-caption">
+                                <h4><a href="{% url 'departments:department_detail' department.slug %}">{{department.name}}</a></h4>
+                                <p>{{department.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {% endfor %}
+                        
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+
+
+{% endblock content %}
+    
+
+

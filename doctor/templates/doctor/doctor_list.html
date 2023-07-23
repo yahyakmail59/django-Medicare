@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+
+<div id="main-content" class="site-main-content">
+    <section class="site-content-area">
+
+        <div class="uni-banner-default uni-background-1">
+            <div class="container">
+                <!-- Page title -->
+                <div class="page-title">
+                    <div class="page-title-inner">
+                        <h1>our doctor</h1>
+                    </div>
+                </div>
+                <!-- End page title -->
+
+                <!-- Breadcrumbs -->
+                <ul class="breadcrumbs">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">page</a></li>
+                    <li><a href="#">our doctor</a></li>
+                </ul>
+                <!-- End breadcrumbs -->
+            </div>
+        </div>
+
+
+        <div class="uni-our-doctor-body">
+            <div class="container">
+                <div class="uni-shortcode-tabs-default">
+                    <div class="uni-shortcode-tab-2">
+                        <div class="tabbable-panel">
+                            <div class="tabbable-line">
+                                
+                                
+                                    
+                                
+                                    
+                                <ul class="nav nav-tabs ">
+                                    {% for cat in category %}
+                                    <li class="cat{{cat.id}}">
+                                        <a href="" data-toggle="tab" aria-expanded="true">
+                                            {{cat.name}} </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab_default_1">
+                                        <div class="row">
+                                            
+                                            {% for doctor in doctors_list %}
+                                                
+                                            <div class="col-md-3 col-sm-6 doctorhide doctor{{doctor.category.id}}">
+                                                <div class="uni-our-doctor-item-default">
+                                                    <div class="item-img">
+                                                        <a href="{% url 'doctors:doctor_detail' doctor.slug %}"><img src="{{doctor.image.url}}" alt="" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="item-caption">
+                                                        <div class="item-caption-head">
+                                                            <div class="col-md-3 col-sm-3 col-xs-3 uni-clear-padding">
+                                                                <div class="item-icons">
+                                                                    
+                                                                    {% for dep in department %}
+                                                                    
+                                                                    {% if doctor.category == dep.name %}
+                                                                    <img src="{{dep.image.url}}" alt="{{dep.name}}">
+                                                                    {% endif %}
+                                                                        
+                                                                    
+                                                                    {% endfor %}
+                                                                        
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-9 col-sm-9 col-xs-9 uni-clear-padding">
+                                                                <div class="item-title">
+                                                                    <h4>{{doctor.name}}</h4>
+                                                                    <span>{{doctor.category}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-caption-info">
+                                                            <table class="table">
+                                                                <thead>
+                                                                <tr>
+                                                                    <td>Degrees</td>
+                                                                    <td>{{doctor.degree}}</td>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>Mon - fri</td>
+                                                                    <td>{{doctor.opening_time_Mon_to_Fri|date:"G:i A"}} - {{doctor.closing_time_Mon_to_Fri|date:"G:i A"}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>saturday</td>
+                                                                    <td> {{doctor.opening_time_Saturday|date:"G:i A"}} - {{doctor.closing_time_Saturday|date:"G:i A"}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Sunday</td>
+                                                                    <td>{{doctor.opening_time_Sunday|date:"G:i A"}} - {{doctor.closing_time_Sunday|date:"G:i A"}}</td>
+                                                                </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <a href="{{doctor.facebook_account}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                                            </li>
+                                                                            <li><a href="{{doctor.twitter_account}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                                            <li><a href="{{doctor.google_plus_account}}" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                                            <li><a href="{{doctor.youtube_account}}" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+{% endblock content %}
+    
+
